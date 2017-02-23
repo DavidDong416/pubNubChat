@@ -1,17 +1,21 @@
-'use strict';
+//'use strict';
 
 /**
  * @ngdoc function
- * @name pubNubChatApp.controller:AboutCtrl
+ * @name pubNubChatApp.controller:JoinCtrl
  * @description
- * # AboutCtrl
+ * # JoinCtrl
  * Controller of the pubNubChatApp
  */
 angular.module('pubNubChatApp')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('JoinCtrl',['$scope', '$rootScope', '$location', 'PubNub', function($scope, $rootScope, $location, PubNub){
+    $scope.data={
+      username: 'User_' + Math.floor(Math.random() * 1000)
+    };
+
+
+    $scope.joinUS= function(){
+      console.log("join...");
+    };
+
+  }]);
