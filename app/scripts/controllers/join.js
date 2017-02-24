@@ -1,4 +1,4 @@
-//'use strict';
+'use strict';
 
 /**
  * @ngdoc function
@@ -7,8 +7,9 @@
  * # JoinCtrl
  * Controller of the pubNubChatApp
  */
+
 angular.module('pubNubChatApp')
-  .controller('JoinCtrl',['$scope', '$rootScope', '$location', 'PubNub', function($scope, $rootScope, $location, PubNub){
+  .controller('JoinCtrl',['$scope', '$rootScope', '$location', 'PubNub', function($scope, $rootScope, $location, a){
     $scope.data={
       username: 'User_' + Math.floor(Math.random() * 1000)
     };
